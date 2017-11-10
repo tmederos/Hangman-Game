@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- Bootstrap style sheet-->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"  id="title">
+        <h1 class="display-3">Game Of Thrones Hangman</h1>
+        <p class="solution"><span id="solution"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="assets/images/GOT-start.jpg" alt="Game of Thrones"  id="char-image">
+      </div>
+      <div class="col-md-6" id="game-stats">
+
+          <p class="game-start">Press Any Letter to Start<span id="game-start"></p>
+
+          <p class="wins">Wins: <span id="wins"> 0</p>
+
+          <p class="guesses-correct">Solution: <span id="answerArray"> _</p>
+
+          <p class="guesses-left">Number of Guesses Remaining: <span id="guesses-left"> 10</p>
+
+          <p class="guesses-wrong">Letters Already Guessed: <span id="guesses-wrong"> _</p>
+
+          <button type="button" class="btn btn-secondary" onclick="playAgain()">Play Again</button>
+          <button type="button" class="btn btn-secondary" onclick="resetWins()">Reset Game</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
