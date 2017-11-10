@@ -1,5 +1,0 @@
-﻿["Tyrion", "Daenerys", "Cersei", "Arya", "Sansa", "Eddard", "Catelyn", "Theon", "Samwell", "Margaery", 
-"Ygritte", "Khal", "Brienne", "Jamie", "Littlefinger", "Jon", "Hodor", "Missandei", "Tormund", "Daario"],
-
-
-

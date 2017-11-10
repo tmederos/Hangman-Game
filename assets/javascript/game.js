@@ -67,6 +67,7 @@
     document.getElementById("guesses-wrong").innerHTML = user.wrongGuesses;
     document.getElementById("guesses-left").innerHTML = user.guesses;
     document.getElementById("wins").innerHTML = user.wins;
+    document.getElementById("losses").innerHTML = user.losses;
   };
   // Determines if the user has guesses all of the letters by
   // counting _'s remaining in solution array
@@ -82,7 +83,6 @@
     for (var j = 0; j < user.theWord.length; j++) {
       user.answerArray[j] = "_";
     }
-    console.log("Split, word length - " +  user.answerArray);
     document.getElementById("answerArray").innerHTML = user.answerArray.join(" ");
   }
   //
@@ -98,7 +98,7 @@
   }
   // Check for repeats
   if(!repeatGuess(user.currentLetter)) {
-    // alert("You already guessed that letter!");
+    alert("You already guessed that letter!");
     return;
   }
   user.allGuesses.push( user.currentLetter );
@@ -124,6 +124,12 @@
     document.getElementById("char-image").setAttribute("src", "assets/images/" + user.theWord.toLowerCase()+".jpg");
     user.wins++;
   }
+  if ( user.guesses === 0 ){
+    user.losses++;
+    playAgain();
+  }
+
+
     // Display Game stats
   renderPage();
   };
